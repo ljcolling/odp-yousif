@@ -29,7 +29,7 @@ document: made/yousif.Rdata made/yousif_download_info.Rdata
 	docker-compose run --rm document
 
 document-docker: 
-	R -e "xfun::)
+	R -e "xfun::pkg_attach2('rmarkdown')"
 	R -e "rmarkdown::render('docs/yousif-LJC.Rmd')"
 
 clean:
