@@ -1,0 +1,9 @@
+#!/bin/bash
+
+find . -maxdepth 1 ! -name 'docs' ! -name '.git' ! -name '.gitignore' ! #-name '.' -exec rm -rf {} \;
+
+cp docs/*.pdf .
+
+rm -rf docs
+
+echo "<a href=\"$(ls *.pdf)\">Document</a>" > index.html
